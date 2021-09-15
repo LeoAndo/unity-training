@@ -22,11 +22,15 @@ public class RouletteController : MonoBehaviour
         // GetMouseButtonDownメソッドはマウスがクリックされた瞬間に一度だけ「true」を返す
         if (Input.GetMouseButtonDown(0)) // 引数 0: 左クリック, 1: 右クリック, 2: 中ボタンクリック
         {
-            this.rotSpeed = 10;
+            this.rotSpeed = 100;
         }
 
         // 回転速度分、ルーレットを回転する.
         // 引数に回転量を指定する。プラスの場合は反時計回り、マイナスの場合は時計回りに回転する
         transform.Rotate(0, 0, this.rotSpeed);
+
+        // ルーレットを少しずつ減速させる
+        // 限りなく「0」に近づいていく。非常に小さい値になるため止まって見える
+        this.rotSpeed *= 0.96f;
     }
 }
