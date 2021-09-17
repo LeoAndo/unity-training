@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UI; // <Text>にアクセスするために必要.
 
+// 監視オブジェクト
+// FlagとCarの距離を計算し、Textに表示する.
 public class GameDirector : MonoBehaviour
 {
     GameObject car;
@@ -21,9 +23,11 @@ public class GameDirector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // GameObjectの座標は object名.transform.position.x で取得可能.
         float length = flag.transform.position.x - car.transform.position.x;
         if (length >= 0)
         {
+            // F2: 小数点以下第2位まで表示
             distance.GetComponent<Text>().text = "ゴールまで" + length.ToString("F2") + "m";
         }
         else
