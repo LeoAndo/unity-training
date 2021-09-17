@@ -34,6 +34,9 @@ public class CarController : MonoBehaviour
             speed = swipeLength / 500.0f;
             Debug.Log("GetMouseButtonUp swipeLength: " + swipeLength);
             Debug.Log("GetMouseButtonUp speed: " + speed);
+
+            // 効果音を再生する.
+            GetComponent<AudioSource>().Play();
         }
         // Translate: 現在の座標から引数に与えた量だけ移動するメソッド
         // なので、引数には座標を直接示しているわけではない。
