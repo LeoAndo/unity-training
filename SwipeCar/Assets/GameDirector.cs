@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; // <Text>にアクセスするために必要.
 
-// 監視オブジェクト
+// 監視オブジェクト用のスクリプト
 // FlagとCarの距離を計算し、Textに表示する.
 public class GameDirector : MonoBehaviour
 {
