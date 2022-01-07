@@ -345,6 +345,7 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/VSSettingsProvider.ref.dll"
 "Assets/ArrowController.cs"
 "Assets/ArrowGenerator.cs"
+"Assets/GameDirector.cs"
 "Assets/PlayerController.cs"
 -langversion:8.0
 
