@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rb;
+    Animator anim;
     float jumpForce = 680.0f;
     float walkForce = 30.0f;
     float maxWalkSpeed = 2.0f;
@@ -12,6 +13,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -48,5 +50,7 @@ public class PlayerController : MonoBehaviour
         {
             transform.localScale = new Vector3(key, 1, 1);
         }
+        // Change the animation speed according to the speed of the player.
+        anim.speed = speedx / 2.0f;
     }
 }
