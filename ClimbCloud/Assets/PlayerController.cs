@@ -42,5 +42,11 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(Vector2.right * key * walkForce);
         }
+
+        // Invert according to the direction of movement.
+        if (key != 0)
+        {
+            transform.localScale = new Vector3(key, 1, 1);
+        }
     }
 }
