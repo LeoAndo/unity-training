@@ -53,4 +53,9 @@ public class PlayerController : MonoBehaviour
         // Change the animation speed according to the speed of the player.
         anim.speed = speedx / 2.0f;
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("GOAL!");
+    }
 }
