@@ -21,4 +21,10 @@ public class IgaguriController : MonoBehaviour
     {
         GetComponent<Rigidbody>().AddForce(dir);
     }
+
+    // isKinematic true. onCollisitoinEnter.
+    void OnCollisionEnter(Collision collision)
+    {
+        GetComponent<Rigidbody>().isKinematic = true;
+    }
 }
