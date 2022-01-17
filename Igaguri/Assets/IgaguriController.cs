@@ -26,5 +26,6 @@ public class IgaguriController : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         GetComponent<Rigidbody>().isKinematic = true;
+        GetComponent<ParticleSystem>().Play(); // 衝突したら、エフェクトを再生する.
     }
 }
