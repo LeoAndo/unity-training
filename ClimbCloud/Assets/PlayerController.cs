@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // jump
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && rb.velocity.y == 0)
         {
             rb.AddForce(Vector2.up * jumpForce);
         }
@@ -53,6 +53,11 @@ public class PlayerController : MonoBehaviour
         }
         // Change the animation speed according to the speed of the player.
         anim.speed = speedx / 2.0f;
+
+        if (transform.position.y < -10) // 画面外に出たら最初から始める
+        {
+            SceneManager.LoadScene("GameScene");
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
