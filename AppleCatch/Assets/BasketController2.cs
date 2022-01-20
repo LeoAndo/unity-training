@@ -30,14 +30,14 @@ public class BasketController2 : MonoBehaviour
     // onTriggerEnter.
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Catch!!");
+        Debug.Log("Catch!");
         if (other.gameObject.tag == "Apple")
         {
-            Debug.Log("Apple!!");
+            Debug.Log("Apple!");
         }
         else if (other.gameObject.tag == "Bomb")
         {
-            Debug.Log("Bomb!!");
+            Debug.Log("Bomb!");
         }
         Destroy(other.gameObject);
     }
