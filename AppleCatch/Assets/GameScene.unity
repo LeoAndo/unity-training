@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bomb
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ce7d02dabc9a246729912ab9874f7714, type: 3}
+      propertyPath: m_TagString
+      value: Bomb
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce7d02dabc9a246729912ab9874f7714, type: 3}
 --- !u!1 &308928817 stripped
@@ -557,6 +561,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ad0e7268e72ac413181cbed7b4f744d5, type: 3}
       propertyPath: m_Name
       value: apple
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad0e7268e72ac413181cbed7b4f744d5, type: 3}
+      propertyPath: m_TagString
+      value: Apple
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad0e7268e72ac413181cbed7b4f744d5, type: 3}
