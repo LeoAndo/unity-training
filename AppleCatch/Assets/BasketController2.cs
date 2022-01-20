@@ -26,4 +26,11 @@ public class BasketController2 : MonoBehaviour
             }
         }
     }
+
+    // onTriggerEnter.
+    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Catch!!");
+        Destroy(other.gameObject);
+    }
 }
