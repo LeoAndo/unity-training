@@ -8,4 +8,5 @@ training for Unity
 
 # dev memo
 
-https://github.com/LeoAndo/unity-training/issues
+https://github.com/LeoAndo/unity-training/issues<br>
+https://github.com/LeoAndo/unity-training/pulls?q=is%3Apr+is%3Aclosed<br>
