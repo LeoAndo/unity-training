@@ -11,10 +11,12 @@ public class Player : MonoBehaviour
     // ユニティちゃん
     [SerializeField]
     private Transform _unityChan;
+    // ユニティちゃんのアニメーター
+    private Animator _unityChanAnimator;
     // Start is called before the first frame update
     void Start()
     {
-
+        _unityChanAnimator = _unityChan.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -31,6 +33,11 @@ public class Player : MonoBehaviour
         {
             UpdatePosition(direction);
             UpdateRotation(direction);
+            _unityChanAnimator.SetBool("running", true);
+        }
+        else
+        {
+            _unityChanAnimator.SetBool("running", false);
         }
     }
 
