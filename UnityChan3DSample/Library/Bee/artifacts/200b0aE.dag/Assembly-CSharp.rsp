@@ -327,6 +327,7 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/VSSettingsProvider.ref.dll"
 "Assets/Game.cs"
+"Assets/Item.cs"
 "Assets/Player.cs"
 "Assets/UnityChanAssets/UnityChan/Scripts/AutoBlink.cs"
 "Assets/UnityChanAssets/UnityChan/Scripts/AutoBlinkforSD.cs"
