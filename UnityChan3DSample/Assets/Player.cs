@@ -6,6 +6,11 @@ public class Player : MonoBehaviour
 {
     // ユニティちゃんの走る速さ
     private const float Speed = 3f;
+    // ユニティちゃんの回転する速さ
+    private const float RotateSpeed = 720f;
+    // ユニティちゃん
+    [SerializeField]
+    private Transform _unityChan;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +30,7 @@ public class Player : MonoBehaviour
         if (Mathf.Approximately(magnitude, 0f) == false)
         {
             UpdatePosition(direction);
+            UpdateRotation(direction);
         }
     }
 
@@ -67,5 +73,12 @@ public class Player : MonoBehaviour
         dest.x = Mathf.Clamp(dest.x, -4.7f, 4.7f);
         dest.z = Mathf.Clamp(dest.z, -4.7f, 4.7f);
         transform.position = dest;
+    }
+    // 方向を更新
+    private void UpdateRotation(Vector3 direction)
+    {
+        Quaternion from = _unityChan.rotation;
+        Quaternion to = Quaternion.LookRotation(direction);
+        _unityChan.rotation = Quaternion.RotateTowards(from, to, RotateSpeed * Time.deltaTime);
     }
 }
