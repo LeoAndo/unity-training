@@ -88,4 +88,14 @@ public class Player : MonoBehaviour
         Quaternion to = Quaternion.LookRotation(direction);
         _unityChan.rotation = Quaternion.RotateTowards(from, to, RotateSpeed * Time.deltaTime);
     }
+    // ほかのトリガイベントに侵入した際に呼ばれる
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Item"))
+        {
+            Item item = other.gameObject.GetComponent<Item>();
+            item.Gotten();
+            // OnGetItemCallback();
+        }
+    }
 }
