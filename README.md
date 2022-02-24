@@ -10,3 +10,4 @@ training for Unity
 
 https://github.com/LeoAndo/unity-training/issues<br>
 https://github.com/LeoAndo/unity-training/pulls?q=is%3Apr+is%3Aclosed<br>
+https://github.com/LeoAndo/unity-training/wiki<br>
